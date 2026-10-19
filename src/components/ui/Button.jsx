@@ -1,9 +1,9 @@
 import "./Button.css";
 
-const Button = ({ children, selected, onClick }) => {
-  const className = `button ${selected ? "selected" : "outline"}`;
+const Button = ({ children, selected, onClick, disabled, variant }) => {
+  const className = `button ${variant || (selected ? "selected" : "outline")}`;
   return (
-    <button onClick={onClick} className={className}>
+    <button onClick={onClick} className={className} disabled={disabled}>
       {children}
     </button>
   );
