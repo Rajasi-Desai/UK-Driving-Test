@@ -17,6 +17,11 @@ const QuestionView = ({ q, currentQuestion, totalQuestions, selectedAnswer, onAn
             <div style={{ display: "flex", gap: "1rem", flexDirection: "row" }}>
                 <div style={{ flex: 1 }}>
                     <QuestionText text={q.question}/>
+                    <AnswerOptions 
+                        options={q.options}
+                        selectedIndex={selectedAnswer}
+                        onSelect={onAnswer}    
+                    />
                 </div>
             </div>
         </Card>

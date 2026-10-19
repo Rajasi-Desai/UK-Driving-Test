@@ -20,6 +20,10 @@ const App = () => {
 
   const q = questions[state.currentQuestion];
 
+  const handleAnswer = (index) => {
+    dispatch({ type: "ANSWER", payload: index})
+  };
+
   const questionView = (
     <QuestionView
       q={q}
@@ -27,7 +31,7 @@ const App = () => {
       totalQuestions={questions.length}
       selectedAnswer={state.answers[state.currentQuestion]}
       timeLeft={state.timeLeft}
-      onAnswer={() => {}}
+      onAnswer={handleAnswer}
       dispatch={dispatch}
     />
   );
