@@ -2,10 +2,10 @@ import { useReducer } from 'react';
 import './App.css';
 import questions from "./data/questions";
 import { quizReducer } from "./state/quizReducer";
-import TempComponent from './components/tempComponent';
 import QuestionView from './components/QuestionView';
 import ProgressBar from './components/ProgressBar';
 import AppBanner from './components/AppBanner';
+import ResultView from './components/ResultView';
 
 const initialState = {
   currentQuestion: 0,
@@ -38,12 +38,20 @@ const App = () => {
     />
   );
 
-  const resultView = (<></>);
+  const score = state.answers.reduce((acc, answer, idx) => {
+    return (answer === questions[idx].correctAnswer) ? acc + 1 : acc;
+  }, 0);
+
+  const resultView = (
+    <ResultView 
+      score={score}
+      questions={questions}
+      answers={state.answers}
+    />
+  );
 
   return (
     <div className='app-container'>
-      <TempComponent state={state} dispatch={dispatch}/>
-
       <ProgressBar 
         current={state.currentQuestion}
         total={questions.length}
