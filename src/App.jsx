@@ -5,6 +5,7 @@ import { quizReducer } from "./state/quizReducer";
 import TempComponent from './components/tempComponent';
 import QuestionView from './components/QuestionView';
 import ProgressBar from './components/ProgressBar';
+import AppBanner from './components/AppBanner';
 
 const initialState = {
   currentQuestion: 0,
@@ -48,6 +49,8 @@ const App = () => {
         total={questions.length}
       />
       
+      <AppBanner />
+
       <div className='quiz-content'>
         {state.submitted ? resultView : questionView}
       </div>
