@@ -1,22 +1,12 @@
+import "./MediaDisplay.css";
+
 const MediaDisplay = ({ type, image, video, autoPlayVideo = true }) => {
   return (
-    <div
-      style={{
-        flex: 1,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className="media-display-container">
       {type === "image" && (
         <img src={image} 
             alt="question" 
-            style={{
-              maxWidth: "100%",
-              aspectRatio: "16/9",
-              objectFit: "cover",
-              borderRadius: "8px",
-            }}
+            className="media"
         />
       )}
       {type === "video" && (
@@ -24,17 +14,11 @@ const MediaDisplay = ({ type, image, video, autoPlayVideo = true }) => {
           controls
           autoPlay={autoPlayVideo}
           muted={autoPlayVideo}
-          style={{
-            maxWidth: "100%",
-            aspectRatio: "16/9",
-            objectFit: "cover",
-            borderRadius: "8px",
-          }}
+          className="media"
         >
           <source src={video} type="video/mp4"/>
         </video>
       )}
-
     </div>
   );
 };

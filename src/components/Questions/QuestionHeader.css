@@ -1,0 +1,14 @@
+h2 {
+  font-size: 1.5rem;
+}
+
+.question-header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.time-container {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

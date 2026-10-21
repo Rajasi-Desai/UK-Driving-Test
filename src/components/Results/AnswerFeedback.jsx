@@ -1,3 +1,5 @@
+import "./AnswerFeedback.css";
+
 const AnswerFeedback = ({ options, correctAnswer, userAnswer}) => {
   return (
     <div>
@@ -8,18 +10,15 @@ const AnswerFeedback = ({ options, correctAnswer, userAnswer}) => {
         return (
           <div 
             key={index}
+            className="button-feedback"
             style={{
                 backgroundColor: isCorrectAnswer
                 ? "#d4edda" 
                 : isWrongAnswer
-                ? "#f8d7da" 
-                : "transparent",
+                  ? "#f8d7da" 
+                  : "transparent",
               color: isWrongAnswer ? "#721c24" : "inherit",
-              padding: "0.5rem 1rem",
-              borderRadius: "8px",
-              marginBottom: "0.5rem",
-              border: isUserAnswer ? "1px solid #007bff" : "1px solid #ccc",
-              whiteSpace: "pre-wrap",
+              border: isUserAnswer ? "1px solid #033735" : "1px solid #ccc",
             }}
           >
             {option}

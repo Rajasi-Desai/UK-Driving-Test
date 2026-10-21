@@ -1,15 +1,10 @@
 import Button from "./ui/Button";
 import { ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
+import "./NavigationControls.css";
 
 const NavigationControls = ({ currentQuestion, totalQuestions, dispatch}) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        marginTop: "2rem",
-      }}
-    >
+    <div className="nav-controls-container">
       <Button 
         onClick={() => dispatch({type: "PREV"})}
         disabled={currentQuestion === 0}

@@ -1,12 +1,12 @@
 :root {
-    --whitesmoke:     #F6FAFA;
-    --darktuqoise:    #033735;
-    --lightturqoise:  #73e7df;  /* rgb(115 231 223) */
-    --color-dark:       var(--darktuqoise);
-    --color-light:      var(--whitesmoke);
-    --color-primary:    var(--lightturqoise);
+  --whitesmoke:     #F6FAFA;
+  --darktuqoise:    #033735;
+  --lightturqoise:  #73e7df;  /* rgb(115 231 223) */
+  --color-dark:       var(--darktuqoise);
+  --color-light:      var(--whitesmoke);
+  --color-primary:    var(--lightturqoise);
 }
 
 .app-container {
-    font-family: "IBM Plex Serif", serif;
+  font-family: "IBM Plex Serif", serif;
 }

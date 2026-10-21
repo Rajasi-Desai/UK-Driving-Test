@@ -1,4 +1,5 @@
 import Card from "../ui/Card";
+import "./ScoreSummary.css";
 
 const ScoreSummary = ({ score, total }) => {
   const isPass = score > 42;
@@ -6,14 +7,12 @@ const ScoreSummary = ({ score, total }) => {
     <Card>
       <h2
         style={{
-          fontSize: "1.5rem",
-          marginBottom: "1rem",
           color: isPass ? "#28a745" : "#dc3545",
         }}
       > 
         {isPass ? "You passed!" : "You failed!" } 
       </h2>
-      <p style={{ fontSize: "1.2rem" }}>
+      <p>
         You scored {score} out of {total}
       </p>
 
