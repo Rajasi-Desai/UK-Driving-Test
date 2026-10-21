@@ -1,9 +1,9 @@
-import Card from "./ui/Card";
+import Card from "../ui/Card";
 import QuestionHeader from "./QuestionHeader";
 import QuestionText from "./QuestionText";
 import AnswerOptions from "./AnswerOptions";
-import MediaDisplay from "./MediaDisplay";
-import NavigationControls from "./NavigationControls";
+import MediaDisplay from "../MediaDisplay";
+import NavigationControls from "../NavigationControls";
 
 const QuestionView = ({ q, currentQuestion, totalQuestions, selectedAnswer, onAnswer, timeLeft, dispatch }) => {
   return (

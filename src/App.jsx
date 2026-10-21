@@ -2,10 +2,10 @@ import { useReducer } from 'react';
 import './App.css';
 import questions from "./data/questions";
 import { quizReducer } from "./state/quizReducer";
-import QuestionView from './components/QuestionView';
+import QuestionView from './components/Questions/QuestionView';
 import ProgressBar from './components/ProgressBar';
 import AppBanner from './components/AppBanner';
-import ResultView from './components/ResultView';
+import ResultView from './components/Results/ResultView';
 
 const initialState = {
   currentQuestion: 0,
