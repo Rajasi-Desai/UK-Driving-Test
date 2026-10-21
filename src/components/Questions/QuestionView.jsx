@@ -6,6 +6,8 @@ import MediaDisplay from "../MediaDisplay";
 import NavigationControls from "../NavigationControls";
 
 const QuestionView = ({ q, currentQuestion, totalQuestions, selectedAnswer, onAnswer, timeLeft, dispatch }) => {
+  const hasMedia = q.type === "image" || q.type === "video";
+
   return (
     <>
     <Card>
@@ -14,16 +16,17 @@ const QuestionView = ({ q, currentQuestion, totalQuestions, selectedAnswer, onAn
         totalQuestions={totalQuestions}
         timeLeft={timeLeft}
       />
-      <div style={{ display: "flex", gap: "1rem", flexDirection: "row" }}>
+      <div style={{ display: "flex", gap: "1rem", flexDirection: "row",}}>
         <div style={{ flex: 1 }}>
           <QuestionText text={q.question}/>
           <AnswerOptions 
             options={q.options}
             selectedIndex={selectedAnswer}
-            onSelect={onAnswer}    
+            onSelect={onAnswer}
+            centered={!hasMedia}
           />
         </div>
-        {(q.type === "image" || q.type === "video") && (
+        {hasMedia && (
           <MediaDisplay 
             key={q.id}
             type={q.type}

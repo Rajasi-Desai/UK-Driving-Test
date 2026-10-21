@@ -1,10 +1,13 @@
 import Button from "../ui/Button";
 
-const AnswerOptions = ({ options, selectedIndex, onSelect }) => {
+const AnswerOptions = ({ options, selectedIndex, onSelect, centered = false }) => {
   return (
     <div>
       {options.map((option, index) => (
-        <div key={index} style={{marginBottom: "0.5rem"}}>
+        <div
+          key={index}
+          style={{ marginBottom: "0.5rem", textAlign: centered ? "center" : "left" }}
+        >
           <Button
             selected={selectedIndex === index}
             onClick={() => onSelect(index)}
