@@ -1,3 +1,5 @@
+@import "../../App.css";
+
 .button {
   padding: 12px 20px;
   font-size: 16px;
@@ -10,33 +12,33 @@
 }
 
 .button.outline {
-  background-color: #ffffff;
-  border: 2px solid #007bff; 
-  color: #007bff; 
+  background-color: var(--color-light); 
+  border: 2px solid var(--color-medium); 
+  color: var(--color-medium);
 }
 
 .button.outline:hover {
-  background-color: #e6f0ff; 
+  background-color: #9ce2de;
 }
 
 .button.selected {
-  background-color: #007bff; 
-  color: #ffffff;
+  background-color: var(--color-primary); 
+  color: var(--color-light); ;
 }
 
 .button.navigation-outline {
-  background-color: #ffffff;
-  border: 2px solid #20c997; 
-  color: #20c997; 
+  background-color: var(--color-light); 
+  border: 2px solid var(--color-primary); 
+  color: var(--color-primary); 
 }
 
 .button.navigation-outline:hover {
-  background-color: #e0fff6; 
+  background-color: var(--color-light);  
 }
 
 .button.navigation-selected {
-  background-color: #20c997; 
-  color: #ffffff;
+  background-color: var(--color-primary); 
+  color: var(--color-light); 
 }
 
 .button:disabled {
